@@ -1,0 +1,1 @@
+export type StatusTypes = "PENDING"|"IN_PROGRESS"|"COMPLETED";
