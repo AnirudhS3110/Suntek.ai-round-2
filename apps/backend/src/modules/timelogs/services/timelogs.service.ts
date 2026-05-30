@@ -27,6 +27,14 @@ export class TimelogsService
 
     const timelog = await this.timelogsRepository.create(dto.taskId,userId);
 
+    if (task.status === "PENDING") {
+      await this.tasksRepository.update(task.id, userId, {
+        title: task.title,
+        description: task.description || "",
+        status: "IN_PROGRESS"
+      } as any);
+    }
+
     this.websocketGateway.emitTimerStarted(userId,{
       taskId:dto.taskId,
       timelog,
