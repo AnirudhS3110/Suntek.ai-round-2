@@ -3,8 +3,8 @@
 A full-stack, modern productivity SaaS dashboard that allows users to manage tasks, track time spent using a real-time timer, and view daily productivity summaries.
 
 ##  Live Demo
- **Live Demo:** [Insert URL Here]
- **Working Auth:** Yes (JWT-based)
+ **Live Demo:** : https://suntek-ai-round-2.vercel.app/ <br/>
+ **Working Auth:** Yes (JWT-based) <br/>
  **Test Credentials:**
    - **Email:** demo1@gmail.com
    - **Password:** pass123
