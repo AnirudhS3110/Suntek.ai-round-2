@@ -7,15 +7,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: (origin, callback) => {
-      // Allow requests with no origin (like mobile apps or curl requests)
-      if (!origin) return callback(null, true);
-      // Allow localhost and any vercel app
-      if (origin.includes('localhost') || origin.includes('vercel.app') || origin === env.clientUrl) {
-        return callback(null, true);
-      }
-      callback(null, true); // Fallback: allow all for this assignment, but can be restricted later.
-    },
+    origin:"https://suntek-ai-round-2.vercel.app",
     credentials: true,
   });
 
